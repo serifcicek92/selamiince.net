@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <?php require(__DIR__."/../../../../../system/basehref.php");?>
+    <title><?php echo $this->title?></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+    <link rel="stylesheet" href="plugins/fonts/icomoon/style.css">
+    
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/magnific-popup.css">
+    <link rel="stylesheet" href="content/css/jquery-ui.css">
+    <link rel="stylesheet" href="content/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="content/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="content/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="content/css/mediaelementplayer.css">
+    <link rel="stylesheet" href="content/css/animate.css">
+    <link rel="stylesheet" href="plugins/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="content/css/fl-bigmug-line.css">
+    <link rel="stylesheet" href="content/css/aos.css">
+    <link rel="stylesheet" href="content/css/style.css">
+    <!-- Partial css -->
+    <?php echo $this->CSS;?>
+  </head>
+  <body>
+  <div class="site-loader"></div>
+  <div class="site-wrap">
+  <div class="container py-1">
+      <div class="row align-items-center">
+        <div class=" col-md-12 text-right">
+                <div>
+                  <a href="tel:05325206240" class="pl-0 pr-3"><span class="icon-phone"></span> 05325206240</a>
+                  <a href="mailto:info@selamiince.com" class="pl-0 pr-3"> info@selamiince.com</a>
+                  <a href="https://api.whatsapp.com/send?phone=905325206240" title="Whatsapp İletişim" class="text-black pl-3 pr-3 "><span class="icon-whatsapp"></span></a>
+                  <a href="https://www.facebook.com/profile.php?id=100008467572683" title="Facebook" class="pl-3 pr-3"><span class="icon-facebook-official"></span></a>
+                  <a href="https://twitter.com/SelamiInce6" title="Twitter" class="pl-3 pr-3"><span class="icon-twitter-square"></span></a>
+                  <a href="https://www.instagram.com/selamiinceremax" title="İnstagram" class="pl-3 pr-3"><span class="icon-instagram-color"></span></a>
+                  <a href="https://www.youtube.com/channel/UCyWf906mASRxPBrVE10lIhQ" title="Youtube" class="pl-3 pr-3"><span class="icon-youtube-play"></span></a>
+                  <a href="https://www.linkedin.com/in/selami-ince-8605a4160/" title="Linkedin" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                </div>
+        </div>
+      </div>
+  </div>
+
+    <?php include INCLUDEPATH.'/app/views/thema/'.THEMANAME.'/partials/navbarPartial.phhtml';?>
+
+    {{Content}}
+    
+    <?php include INCLUDEPATH.'/app/views/thema/'.THEMANAME.'/partials/footerPartial.phhtml';?>
+    
+  </div>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/jquery-migrate-3.0.1.min.js"></script>
+  <script src="script/jquery-ui.js"></script>
+  <script src="scripts/popper.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/owl.carousel.min.js"></script>
+  <script src="scripts/mediaelement-and-player.min.js"></script>
+  <script src="scripts/jquery.stellar.min.js"></script>
+  <script src="scripts/jquery.countdown.min.js"></script>
+  <script src="scripts/jquery.magnific-popup.min.js"></script>
+  <script src="scripts/bootstrap-datepicker.min.js"></script>
+  <script src="scripts/aos.js"></script>
+  <script src="scripts/main.js?v=<?php echo rand(1,999);?>"></script>
+  <!-- Partial Javascript -->
+  <?php echo $this->scripts; ?>
+  </body>
+</html>

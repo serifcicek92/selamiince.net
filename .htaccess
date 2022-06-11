@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^([0-9a-zA-Z-_/]+)$ index.php [QSA]
+RewriteRule sitemap.xml sitemap.php [QSA]
+Options All -Indexes
+
+#RewriteCond ahrefs_489742579f30c9e16f794259170d31f57ce6a338924038888a63e93c8c28fcc0 -f
+RewriteCond ahrefs_489742579f30c9e16f794259170d31f57ce6a338924038888a63e93c8c28fcc0 -d
+
+
+
+ErrorDocument 404 http://selamiince.net/404.html

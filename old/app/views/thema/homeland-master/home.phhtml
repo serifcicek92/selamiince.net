@@ -1,0 +1,756 @@
+<!-- carousel banner start -->
+<?php include INCLUDEPATH.'/app/views/thema/'.THEMANAME.'/partials/bannerPartial.phhtml';?>
+<!-- carousel banner end -->
+<!-- Search -->
+    <div class="site-section site-section-sm pb-0">
+      <div class="container">
+        <div class="row">
+          <form class="form-search col-md-12" style="margin-top: -100px;">
+            <div class="row  align-items-end">
+              <div class="col-md-3">
+                <label for="list-types">Listeleme Tipi</label>
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="list-types" id="list-types" class="form-control d-block rounded-0">
+                    <option value="">Apartman</option>
+                    <option value="">Ticari Bina</option>
+                    <option value="">Arsa Mülkiyeti</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="offer-types">Teklif Türü</label>
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+                    <option value="">Satılık</option>
+                    <option value="">Kiralık</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="col-md-3">
+                <label for="select-city">Select City</label>
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select name="select-city" id="select-city" class="form-control d-block rounded-0">
+                    <option value="">New York</option>
+                    <option value="">Brooklyn</option>
+                    <option value="">London</option>
+                    <option value="">Japan</option>
+                    <option value="">Philippines</option>
+                  </select>
+                </div>
+              </div> -->
+              <div class="col-md-3">
+                <input type="submit" class="btn btn-success text-white btn-block rounded-0" value="Ara">
+              </div>
+            </div>
+          </form>
+        </div>  
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="view-options bg-white py-3 px-3 d-md-flex align-items-center">
+              <div class="mr-auto">
+                <!-- <a href="index.html" class="icon-view view-module active"><span class="icon-view_module"></span></a>
+                <a href="view-list.html" class="icon-view view-list"><span class="icon-view_list"></span></a> -->
+                
+              </div>
+              <div class="ml-auto d-flex align-items-center">
+                <div>
+                  <a href="#" class="view-list px-3 border-right active">Hepsi</a>
+                  <a href="#" class="view-list px-3 border-right">Kiralık</a>
+                  <a href="#" class="view-list px-3">Satılık</a>
+                </div>
+
+
+                <div class="select-wrap">
+                  <span class="icon icon-arrow_drop_down"></span>
+                  <select class="form-control form-control-sm d-block rounded-0">
+                    <option value="">Sıralama</option>
+                    <option value="">Artan Fiyat</option>
+                    <option value="">Azalan Fiyat</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+
+
+<!-- search end -->
+
+<!-- properties -->
+    <div class="site-section site-section-sm bg-light">
+      <div class="container">
+      
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-danger">Satılık</span>
+                  <span class="offer-type bg-success d-none">Kiralık</span>
+                </div>
+                <img src="assets/images/property/orginals/big_10279150516wb.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <!-- <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a> -->
+                <h2 class="property-title"><a href="property-details.html">Satılık 22 Dönüm Arazi Kemerburgaz Eyüp</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> İstanbul / Eyüpsultan / Mimar Sinan Mh.</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">350.000.000 TL</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <!-- <li>
+                    <span class="property-specs">Beds</span>
+                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Baths</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li> -->
+                  <li>
+                    <span class="property-specs">Metrekare</span>
+                    <span class="property-specs-number">22.000</span>
+                    
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-danger d-none">Sale</span>
+                  <span class="offer-type bg-success">Kiralık</span>
+                </div>
+                <img src="assets/images/property/orginals/x16_1016441251fyv.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <!-- <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a> -->
+                <h2 class="property-title"><a href="property-details.html">Kiralık Ofis Vadistanbul Teraslı 3013 m2 skyland nurol seba</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> İstanbul / Sarıyer / Ayazağa Mh.</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">Belirtilmemiş</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Oda Sayısı</span>
+                    <span class="property-specs-number">1 <sup>+</sup>0</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Bina Yaşı</span>
+                    <span class="property-specs-number">3</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Metrekare</span>
+                    <span class="property-specs-number">3.013</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-info">Satılık</span>
+                </div>
+                <img src="assets/images/property/orginals/x16_1025338340lns.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <!-- <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a> -->
+                <h2 class="property-title"><a href="property-details.html">SATILIK 2+1 FIRSAT DAİRE 4 LEVENT METRO YÜRÜME MESAFEDE</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> İstanbul / Kağıthane / Merkez Mah.</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">Belirtilmemiş</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Oda Sayısı</span>
+                    <span class="property-specs-number">2 <sup>+</sup>1</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Banyo Sayısı</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Metrekare</span>
+                    <span class="property-specs-number">100</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-danger">Satılık</span>
+                  <span class="offer-type bg-success d-none">Rent</span>
+                </div>
+                <img src="assets/images/property/orginals/x16_1026336024nnp.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <!-- <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a> -->
+                <h2 class="property-title"><a href="property-details.html">Satılık Daire Kordon İstanbul 4+1 avangart vadistanbul CİTİZENSH</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> İstanbul / Kağıthane / Hamidiye Mah.</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">Belirtilmemiş</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">oda sayısı</span>
+                    <span class="property-specs-number">4 <sup>+</sup>1</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Banyo sayısı</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Metrekare</span>
+                    <span class="property-specs-number">227</span>
+                    
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-danger d-none">Sale</span>
+                  <span class="offer-type bg-success">Kiralık</span>
+                </div>
+                <img src="assets/images/property/orginals/x16_10170261381ol.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <!-- <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a> -->
+                <h2 class="property-title"><a href="property-details.html">Kiralık Dükkan Kordon İstanbul 163 m2 vadi cendere avangart</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> İstanbul / Kağıthane / Hamidiye Mah.</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">Belirtilmemiş</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Oda Sayısı</span>
+                    <span class="property-specs-number">1</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-info">Lease</span>
+                </div>
+                <img src="images/img_6.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+                <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Beds</span>
+                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Baths</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">SQ FT</span>
+                    <span class="property-specs-number">5,500</span>
+                    
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-danger">Sale</span>
+                  <span class="offer-type bg-success">Rent</span>
+                </div>
+                <img src="images/img_7.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+                <h2 class="property-title"><a href="property-details.html">625 S. Berendo St</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Beds</span>
+                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Baths</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">SQ FT</span>
+                    <span class="property-specs-number">7,000</span>
+                    
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-danger">Sale</span>
+                  <span class="offer-type bg-success">Rent</span>
+                </div>
+                <img src="images/img_8.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+                <h2 class="property-title"><a href="property-details.html">871 Crenshaw Blvd</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 1 New York Ave, Warners Bay, NSW 2282</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Beds</span>
+                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Baths</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">SQ FT</span>
+                    <span class="property-specs-number">1,620</span>
+                    
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-md-6 col-lg-4 mb-4">
+            <div class="property-entry h-100">
+              <a href="property-details.html" class="property-thumbnail">
+                <div class="offer-type-wrap">
+                  <span class="offer-type bg-info">Lease</span>
+                </div>
+                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+              </a>
+              <div class="p-4 property-body">
+                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+                <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
+                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</span>
+                <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
+                <ul class="property-specs-wrap mb-3 mb-lg-0">
+                  <li>
+                    <span class="property-specs">Beds</span>
+                    <span class="property-specs-number">2 <sup>+</sup></span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">Baths</span>
+                    <span class="property-specs-number">2</span>
+                    
+                  </li>
+                  <li>
+                    <span class="property-specs">SQ FT</span>
+                    <span class="property-specs-number">5,500</span>
+                    
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="site-pagination">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <span>...</span>
+              <a href="#">10</a>
+            </div>
+          </div>  
+        </div> -->
+        
+      </div>
+    </div>
+
+    <!-- properties end -->
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h3 class="col-md-7 text-center">
+           Hayallerini erteleme, şimdi değilse ne zaman, hemen ara
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" style="background:url('assets/images/bulut.jpg'); background-size: cover;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center">
+            <img src="assets/images/selami-ince-emlak-danismani.jpg"/>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="row">
+              <div class="col-md-12">
+              <div class="text">
+                <h2 class="mb-2 font-weight-light text-black h4">Selami İnce</h2>
+                <b class="d-block mb-3 text-white-opacity-05">Gayrimenkul Danışmanı / Finans Uzmanı</b>
+                <p>Başarıya giden yolda, çağın gerektirdiği değişimlere, profesyonel çözümler üretmek ve insanlara 
+yeniden başlayacakları, mutlu olacakları evler (yaşam alanları, işyerleri) sunmak <b>emlak 
+sektörüne</b> yeni bir soluk getirmek için, sektörün en iyisi ileyim, REMAX 'tayım...</p>
+<p>Bu yolda sizlerin <b>gayrimenkul danışmanınız</b> olarak, başarımı paylaşmak isteyenlerin benimle iletişime geçmesini beklemekteyim.</p>
+                <p>
+                  <a href="tel:05325206240" class="text-black p-2"><span class="icon-phone"></span></a>
+                  <a href="https://api.whatsapp.com/send?phone=905325206240" class="text-black p-2"><span class="icon-whatsapp"></span></a>
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="col-md-7 text-center">
+           YETENEKLERİM
+          </h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center">Emlak Danışmanı</div>
+          <div class="col-md-4 text-center">Koçluk</div>
+          <div class="col-md-4 text-center">Satış Yönetimi</div>
+          <div class="col-md-4 text-center">Ekip Liderliği</div>
+          <div class="col-md-4 text-center">Pazarlama Stratejisi</div>
+          <div class="col-md-4 text-center">Müzakere</div>
+          <div class="col-md-4 text-center">Satış ve Pazarlama</div>
+          <div class="col-md-4 text-center">Takım Oluşturma</div>
+          <div class="col-md-4 text-center">Müşteri Hizmetleri </div>
+          <div class="col-md-4 text-center">Girişimcilik</div>
+          <div class="col-md-4 text-center">Araştırmacı</div>
+          <div class="col-md-4 text-center">Fikir danışmanı</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section pt-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <h3 class="text-center">SERTİFİKALAR VE EĞİTİMLER </h3>
+            <div class="sertifikalar owl-carousel">
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/cr=w_99,h_100.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/cr=w_133,h_100.webp" alt="">
+                </div>
+              </div>
+              
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/cr=w_238,h_100.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/cr=w_240,h_100.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/cr=w_267,h_100.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/cr=w_388,h_100.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=h_100,cg_true,m(1).webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=h_100,cg_true,m(2).webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=h_100,cg_true,m(3).webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=h_100,cg_true,m(4).webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=h_100,cg_true,m(5).webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=h_100,cg_true,m.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=w_66,h_100,cg_true.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=w_92,h_100,cg_true.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=w_175,h_100,cg_true.webp" alt="">
+                </div>
+              </div>
+
+              <div>
+                <div class="item">
+                   <img src="assets/images/egitimsertifika/rs=w_188,h_100,cg_true,m.webp" alt="">
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 text-center">
+            <div class="site-section-title">
+              <h2>Why Choose Us?</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="service text-center">
+              <span class="icon flaticon-house"></span>
+              <h2 class="service-heading">Research Subburbs</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+              <p><span class="read-more">Read More</span></p>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="service text-center">
+              <span class="icon flaticon-sold"></span>
+              <h2 class="service-heading">Sold Houses</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+              <p><span class="read-more">Read More</span></p>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="service text-center">
+              <span class="icon flaticon-camera"></span>
+              <h2 class="service-heading">Security Priority</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
+              <p><span class="read-more">Read More</span></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <div class="site-section-title">
+              <h2>Recent Blog</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <a href="#"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
+              <h2 class="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+            <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
+              <h2 class="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
+            <a href="#"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+            <div class="p-4 bg-white">
+              <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
+              <h2 class="h5 text-black mb-3"><a href="#">Art Gossip by Mike Charles</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias enim, ipsa exercitationem veniam quae sunt.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div> -->
+
+    
+    <!-- <div class="site-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7">
+            <div class="site-section-title text-center">
+              <h2>Our Agents</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+              <div class="team-member">
+
+                <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded mb-4">
+
+                <div class="text">
+
+                  <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
+                  <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</p>
+                  <p>
+                    <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+                    <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+                    <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+              <div class="team-member">
+
+                <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded mb-4">
+
+                <div class="text">
+
+                  <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
+                  <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p>
+                  <p>
+                    <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+                    <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+                    <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+              <div class="team-member">
+
+                <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded mb-4">
+
+                <div class="text">
+
+                  <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
+                  <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores illo iusto, inventore, iure dolorum officiis modi repellat nobis, praesentium perspiciatis, explicabo. Atque cupiditate, voluptates pariatur odit officia libero veniam quo.</p>
+                  <p>
+                    <a href="#" class="text-black p-2"><span class="icon-facebook"></span></a>
+                    <a href="#" class="text-black p-2"><span class="icon-twitter"></span></a>
+                    <a href="#" class="text-black p-2"><span class="icon-linkedin"></span></a>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            
+
+          </div>
+      </div>
+    </div> -->

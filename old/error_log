@@ -1,0 +1,15 @@
+[01-Jun-2022 13:20:01 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 25
+[01-Jun-2022 13:20:01 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 28
+[01-Jun-2022 13:20:01 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 29
+[01-Jun-2022 13:20:01 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 30
+[01-Jun-2022 13:20:01 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 48
+[01-Jun-2022 13:20:23 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 25
+[01-Jun-2022 13:20:23 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 28
+[01-Jun-2022 13:20:23 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 29
+[01-Jun-2022 13:20:23 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 30
+[01-Jun-2022 13:20:23 UTC] PHP Warning:  Undefined variable $menuActive in /home/cfjselam/public_html/app/views/thema/homeland-master/partials/navbarPartial.phhtml on line 48
+[01-Jun-2022 13:22:50 UTC] PHP Warning:  require_once(.:/opt/cpanel/ea-php80/root/usr/share/pear/system/Application.php): Failed to open stream: No such file or directory in /home/cfjselam/public_html/index.php on line 17
+[01-Jun-2022 13:22:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '.:/opt/cpanel/ea-php80/root/usr/share/pear/system/Application.php' (include_path='/home/cfjselam/public_html') in /home/cfjselam/public_html/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/cfjselam/public_html/index.php on line 17

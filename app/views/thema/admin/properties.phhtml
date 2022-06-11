@@ -1,0 +1,479 @@
+
+<div class="row">
+    <div class="col-md-12 mb-2">
+        <h3>Mülkiyetler</h3>
+    </div>
+</div>
+<?php //unset($_SESSION["PROPERTIE"])?>
+
+<?php if (!isset($_SESSION["PROPERTIE"]["id"])): ?>
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Mülkiyet Ekleme</h4>
+            <p class="card-description">
+                Mülkiyet Ekleme Formu
+            </p>
+            <form class="forms-sample" method="POST" action="" id="addform" data-post="ekle" enctype="multipart/form-data">
+           
+                <div class="form-group">
+                    <label for="baslik">Mülkiyet Başlık</label>
+                    <input type="text" required name="baslik" class="form-control" id="baslik" placeholder="Başlık">
+                </div>
+                <div class="form-group">
+                    <label for="aciklama">Mülkiyet Açıklama</label>
+                    <textarea class="form-control" id="aciklama" name="aciklama" placeholder="Mülkiyet Açıklama"></textarea>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="fiyat">Fiyatı</label>
+                        <input type="number" name="fiyat" step="any" class="form-control" id="fiyat" placeholder="fiyat">
+                    </div>
+                    
+                    <div class="form-group col">
+                        <label for="odasayisi">Oda Sayısı</label>
+                        <input type="number" name="odasayisi" class="form-control" id="odasayisi" placeholder="Oda Sayısı">
+                    </div>
+                    <div class="form-group col">
+                        <label for="banyosayisi">Banyo Sayısı</label>
+                        <input type="number" name="banyosayisi" class="form-control" id="banyosayisi" placeholder="Banyo Sayısı">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="katbilgisi">Kat Bilgisi</label>
+                        <input type="number" name="katbilgisi" class="form-control" id="katbilgisi" placeholder="Kat Bilgisi">
+                    </div>
+                    <div class="form-group col">
+                        <label for="binayasi">Bina Yaşı</label>
+                        <input type="number" name="binayasi" class="form-control" id="binayasi" placeholder="Bina Yaşı">
+                    </div>
+                    <div class="form-group col">
+                        <label for="metrekare">m<sup>2</sup> Bilgisi</label>
+                        <input type="number" required step="any" name="metrekare" class="form-control" id="metrekare" placeholder="Metrekare Bilgisi">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="mulktipi">Mülk Tipi</label>
+                        <select required class="form-control form-control-sm" id="mulktipi" name="mulktipi">
+                        <?php
+                            foreach ($mulkTipleri as $val) {
+                                echo '<option value="' . $val["id"] . '">' . $val["degeri"] . '</option>';
+                            }
+                        ?>
+                    </select>
+                    </div>
+
+                    <div class="form-group col">
+                        <label for="teklifturu">Teklif Türü</label>
+                        <select required class="form-control form-control-sm" id="teklifturu" name="teklifturu">
+                        <?php
+                                foreach ($teklifTuru as $val) {
+                                    echo '<option value="' . $val["id"] . '">' . $val["degeri"] . '</option>';
+                                }
+                            ?>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="adres">Adres</label>
+                        <input required type="text" name="adres" class="form-control" id="adres" placeholder="adres" autocomplete="none" role="presentation">
+                    </div>
+                    <div class="row">
+                    <div class="form-group col">
+                        <label for="il">İl</label>
+                        <input required type="text" name="il" class="form-control" id="il" placeholder="il">
+                    </div>
+
+                    <div class="form-group col">
+                        <label for="ilce">İlçe</label>
+                        <input required type="text" name="ilce" class="form-control" id="ilce" placeholder="ilçe">
+                    </div>
+                    <div class="form-group col">
+                        <label for="semt">Semt</label>
+                        <input required type="text" name="semt" class="form-control" id="semt" placeholder="Semt">
+                    </div>
+                    <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                        <input type="checkbox" name="anasayfadagoster" class="form-check-input">
+                        Anasayfada Göster
+                      <i class="input-helper"></i></label>
+                    </div>
+                </div>
+                
+
+                <div class="alert alert-success" role="alert" style="display: none;" id="addAlert">
+                    kayıt ekleme başarılı
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Ekle</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+<?php elseif(isset($_SESSION["PROPERTIE"]["edit"]) && $_SESSION["PROPERTIE"]["edit"] == true):
+    ?>
+    <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Mülkiyet Düzenle</h4>
+            <p class="card-description">
+                Mülkiyet Düzenleme Formu
+            </p>
+            <form class="forms-sample" method="POST" action="admin/mulkiyetler/guncelle" data-post="ekle" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="baslik">Mülkiyet Başlık</label>
+                    <input type="text" required name="baslik" class="form-control" id="baslik" value="<?php echo $edit[0]["baslik"] ?>" placeholder="Başlık">
+                </div>
+                <div class="form-group">
+                    <label for="aciklama">Mülkiyet Açıklama</label>
+                    <textarea class="form-control" id="aciklama" name="aciklama" placeholder="Mülkiyet Açıklama" ><?php echo $edit[0]["aciklama"] ?></textarea>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="fiyat">Fiyatı</label>
+                        <input type="number" name="fiyat" step="any" class="form-control" id="fiyat" placeholder="fiyat"  value="<?php echo $edit[0]["fiyat"] ?>">
+                    </div>
+                    
+                    <div class="form-group col">
+                        <label for="odasayisi">Oda Sayısı</label>
+                        <input type="number" name="odasayisi" class="form-control" id="odasayisi" placeholder="Oda Sayısı" value="<?php echo $edit[0]["odasayisi"] ?>">
+                    </div>
+                    <div class="form-group col">
+                        <label for="banyosayisi">Banyo Sayısı</label>
+                        <input type="number" name="banyosayisi" class="form-control" value="<?php echo $edit[0]["banyosayisi"] ?>" id="banyosayisi" placeholder="Banyo Sayısı">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="katbilgisi">Kat Bilgisi</label>
+                        <input type="number" name="katbilgisi" class="form-control" value="<?php echo $edit[0]["kat"] ?>" id="katbilgisi" placeholder="Kat Bilgisi">
+                    </div>
+                    <div class="form-group col">
+                        <label for="binayasi">Bina Yaşı</label>
+                        <input type="number" name="binayasi" class="form-control" value="<?php echo $edit[0]["binayasi"] ?>" id="binayasi" placeholder="Bina Yaşı">
+                    </div>
+                    <div class="form-group col">
+                        <label for="metrekare">m<sup>2</sup> Bilgisi</label>
+                        <input type="number" required step="any" name="metrekare" value="<?php echo $edit[0]["metrekare"] ?>" class="form-control" id="metrekare" placeholder="Metrekare Bilgisi">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="mulktipi">Mülk Tipi</label>
+                        <select required class="form-control form-control-sm" id="mulktipi" name="mulktipi">
+                        <?php
+                            foreach ($mulkTipleri as $val) {
+                                if ($val["id"] == $edit[0]["mulktipiid"]) {
+                                    echo '<option selected value="' . $val["id"] . '">' . $val["degeri"] . '</option>';
+                                }else{
+                                    echo '<option value="' . $val["id"] . '">' . $val["degeri"] . '</option>';
+                                }
+                            }
+                        ?>
+                    </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="teklifturu">Teklif Türü</label>
+                        <select required class="form-control form-control-sm" id="teklifturu" name="teklifturu">
+                        <?php
+                                foreach ($teklifTuru as $val) {
+                                    if ($val["id"] == $edit[0]["telifturuid"]) {
+                                        echo '<option selected value="' . $val["id"] . '">' . $val["degeri"] . '</option>';
+                                    }else{
+                                        echo '<option value="' . $val["id"] . '">' . $val["degeri"] . '</option>';
+                                    }
+
+                                }
+                            ?>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="adres">Adres</label>
+                        <input required type="text" value="<?php echo $edit[0]["adres"] ?>" name="adres" class="form-control" id="adres" placeholder="adres" autocomplete="none" role="presentation">
+                    </div>
+                    <div class="row">
+                    <div class="form-group col">
+                        <label for="il">İl</label>
+                        <input required type="text" value="<?php echo $edit[0]["il"] ?>" name="il" class="form-control" id="il" placeholder="il">
+                    </div>
+
+                    <div class="form-group col">
+                        <label for="ilce">İlçe</label>
+                        <input required type="text" value="<?php echo $edit[0]["ilce"] ?>" name="ilce" class="form-control" id="ilce" placeholder="ilçe">
+                    </div>
+                    <div class="form-group col">
+                        <label for="semt">Semt</label>
+                        <input required type="text" name="semt" class="form-control" id="semt" placeholder="Semt">
+                    </div>
+                    <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                            <input type="checkbox" <?php echo $edit[0]["anasayfadagoster"] == "on" ? "checked" : ""; ?> name="anasayfadagoster" class="form-check-input">
+                                Anasayfada Göster
+                            <i class="input-helper"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="alert alert-success" role="alert" style="display: none;" id="addAlert">
+                    kayıt Güncelleme başarılı
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Güncelle</button><a href="admin/resimduzenle" class="btn btn-primary me-2">Resimleri Düzenle</a>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+<?php
+else: ?>
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card_title">Resimleri Yükle</h4>
+                <p class="card-description"><?= $_SESSION["PROPERTIE"]["baslik"]; ?></p>
+                <form class="forms-sample" method="POST" action="admin/resimekle" id="imageaddForm" data-post="ekle" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Resim Yükle</label>
+                        <input type="file" multiple name="img[]" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">
+                        <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-primary" type="button">Yükle</button>
+                        </span>
+                        </div>
+                    </div>
+                </form>
+                <style>
+                    /* .image-wrap{
+                        position: relative;
+                    }
+                    .image-wrap:hover::after{
+                        content: '';
+                        align-items: center;
+                        color: red;
+                        height: auto;
+                        cursor: pointer;
+                        text-align: center;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0px;
+                        left: 0px;
+
+                    } */
+                </style>
+                <div class="row">
+                    <?php
+
+                        foreach ($medyalar as $key) {
+                            if ($key["medyatipi"] == '19') {
+
+                                echo '
+                                    <div class="col-md-4 col-6 mt-3">
+                                        <div class="image-wrap">
+                                            <button data-toggle="modal" data-target="#resimekleModal" data-ref="'.$key["id"].'" data-whatever="' . $key["medialink"] . '"><img src="' . $key["medialink"] . '" width="96" height="75"></button>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                            else {
+                                echo '
+                                    <div class="col-md-4 col-6 mt-3">
+                                        <div class="image-wrap">
+                                            <button data-toggle="modal" data-target="#videoekleModal" data-ref="'.$key["id"].'"  data-whatever="' . $key["medialink"] . '">
+                                                <img src="assets/images/video.jpg" width="96" height="75">
+                                            </button>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                        }
+                    ?>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <a href="medyalar/tamamla" class="btn-primary p-2 text-decoration-none">İşlemi Tamamla</a>
+                    </div>
+                    <div class="col imageloader d-none">
+                        <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only"></span>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+endif; ?>
+<div class="modal fade" id="resimekleModal" tabindex="-1" role="dialog" aria-labelledby="resimekleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+            <img src="" width="100%" class="modalImage"/>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+      </div>
+      <div class="modal-body">
+            <a href="" class="Sil">
+                <span>Sil</span>
+            </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="videoekleModal" tabindex="-1" role="dialog" aria-labelledby="videoekleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+            <video controls="" class="modalVideo" autoplay name="media" width="100%">
+                <source class="videoSource"  src="" type="video/mp4;codecs="avc1.42E01E, mp4a.40.2"">
+            </video>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+      </div>
+      <div class="modal-body">
+            <a href="" class="Sil">
+                <span>Sil</span>
+            </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Send message</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+        <div class="card-body">
+            <div class="alert alert-success" role="alert" style="display: none;" id="dellAlert">
+                    kayıt silme başarılı
+            </div>
+            <div class="table-content">
+                <div class="table-responsive table-view d-none" id="kategoridetaytablo" data-kategori="<?php //echo $menu["ID"]?>">
+                    <h4 class="card-title"><?php //echo $menu["ADI"]?> Liste</h4>
+                    <table class="table table-striped" >
+                        <thead>
+                        <tr>
+                            <th>Resim</th>
+                            <th>Başlık</th>
+                            <th>mülk Tipi</th>
+                            <th>Teklif Türü</th>
+                            <th>İlçe/Şehir</th>
+                            <th>İlan Aktif</th>
+                            <th>İşlem</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // var_dump($mulkler);
+                            foreach ($mulkler as $mulk) {
+                                echo "<tr>";
+                                echo "<td><img src='".$mulk["media"]."' width='80'/></td>";
+                                echo "<td>".$mulk["baslik"]."</td>";
+                                echo "<td>".$mulk["mulktipi"]."</td>";
+                                echo "<td>".$mulk["teklifturu"]."</td>";
+                                echo "<td>".$mulk["ilce"]."/".$mulk["il"]."</td>";
+                                if ($mulk["ilanaktif"] == "1") {
+                                    echo "<td ><a href='/admin/mulkiyetler/deaktif/".$mulk["id"]."' class='text-danger'> deaktif et</a> </td>";
+                                }else {
+                                    echo "<td> <a href='/admin/mulkiyetler/aktif/".$mulk["id"]."' class='text-success'>aktif et </a></td>";
+                                }
+                                echo '<td>
+                                        <a class="mdi mdi-pencil text-success" href="admin/mulkiyetler/duzenle/'.$mulk["id"].'"></a>
+                                        <a class="mdi mdi-delete-forever text-danger" href="admin/mulkiyetler/sil/'.$mulk["id"].'"></a>
+                                    </td>';
+                                echo "</tr>";
+
+                            }?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="dialog-form" title="Düzenle">
+  <p class="validateTips"></p>
+ 
+  <form class="forms-sample" method="POST" action="" id="editform" data-post="ekle" enctype="multipart/form-data">
+        <div class="form-group">
+                <input type="number" name="detayid" class="form-control invisible" id="detayid">
+        </div>
+        <div class="form-group">
+        <label for="menuref">Kategori Seçiniz</label>
+        <?php
+//$menuler = array_filter(Application::$app->menuler->getMenuler(null),function($val){if ($val["USTID"]!=0) {return $val;}});
+//$menuler = array_values($menuler);
+// var_dump($menuler);
+// exit;
+?>
+        <select class="form-control form-control-sm" name="menuref" id="menuref">
+            <?php //foreach ($menuler as $menu):?>
+            <option value="<?php //echo $menu["ID"] ?>"><?php //echo$menu["ADI"] ?></option>
+            <?php //endforeach;?>
+        </select>
+        </div>
+        <div class="form-group">
+        <label for="kategoritip">Kategori Tipi Seçiniz</label>
+        <select class="form-control form-control-sm" id="kategoritip" name="kategoritip">
+            <?php //$kdi = Application::$app->komboDegerleri->getKomboDegerlerByAdi('KATEGORITIPI');
+// foreach ($kdi as $val) {
+//     echo '<option value="'.$val["val1"].'">'.$val["degeri"].'</option>';
+// }
+?>
+        </select>
+        </div>
+        <div class="form-group">
+            <label for="baslik">Mülkiyet Başlık</label>
+            <input type="text" name="baslik" class="form-control" id="baslik" placeholder="Başlık">
+        </div>
+        <div class="form-group">
+            <label for="detayaltbaslik">Mülkiyet Açıklama</label>
+            <textarea class="form-control" id="aciklama" name="aciklama">
+        </div>
+        <div class="form-group">
+            <label for="detayaciklama">Detay Açıklama</label>
+            <textarea name="detayaciklama" class="form-control" id="detayaciklama" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <label>File upload</label>
+            <input type="file" name="img[]" class="file-upload-default" id="fileimg">
+            <div class="input-group col-xs-12">
+            <span class="input-group-append">
+                <img src="" height="50" class="file-upload-browse" id="editImg"/>
+            </span>
+            </div>
+        </div>
+        <div class="alert alert-success d-none" role="alert" id="EditAlert">
+            Kaydetme başarılı
+        </div>
+        <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+        <button type="button" class="btn btn-danger me-2" id="vazgec">Vazgeç</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+

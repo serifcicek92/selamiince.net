@@ -1,0 +1,64 @@
+properties
+    id
+    Başlık
+    Açıklama
+    il
+    ilçe
+    Adres
+    fiyatid
+    Oda Sayısı
+    banyo sayısı
+    kat
+    Bina Yaşı
+    Metrekare
+    Mülk tipi
+    teklifturu
+    eklemezamani
+    ekleyenid
+    guncellemezamani
+    guncelleyenid
+    aktif
+
+medyalar
+    propertieId
+    medyatipi
+    kucukresimvarmi
+    aktif
+
+
+Fiyatlar
+    propertieId
+    Fiyat
+    dovizcinsi
+    aktif
+
+
+Kombo değerleri
+    Mülk tipi (listeleme)
+        Daire
+        Konut
+        Müstakil Ev
+        Yazlık
+        Köy Evi
+        Dağ Evi
+        Villa
+        Yalı
+        Prefabrik
+        Devremülk
+        İşyeri
+        Apartman - Bina
+        Ticari Bina
+        Arsa Mülkiyeti
+        Turistik Tesis
+        Günlük Kiralık Konut
+    Teklif Türü
+        Satılık
+        Kiralık
+    medya tipleri
+        Resim
+        Video
+    Döviz Türleri
+        dolar
+        euro
+        tl
+

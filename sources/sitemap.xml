@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://selamiince.net/</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/anasayfa</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/emlak-danismaniniz-hakkinda</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/emlak/satilik</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/emlak/kiralik</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/iletisim</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/gayrimenkul/2</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://selamiince.net/gayrimenkul/3</loc>
+  <lastmod>2022-06-08T12:58:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

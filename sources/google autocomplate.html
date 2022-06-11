@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF40MseS3i0xbQm-CRtzit2HiwG85HMjw&libraries=places&v=weekly" async defer></script>
+		  <script> 
+			var autocomplete;
+			   function initialize() { 
+				 autocomplete = new google.maps.places.Autocomplete( 
+					/** @type {HTMLInputElement} */ 
+
+					(document.getElementById("autocomplete")), 
+				   { types: ["geocode"] } 
+				  ); 
+				 google.maps.event.addListener(autocomplete, "place_changed", function() {
+				//   console.log(autocomplete.getPlace());
+				  const place = autocomplete.getPlace();
+				  for (const component of place.address_components) {
+						// console.log(component);
+
+						switch (component["types"][0]) {
+							case "street_number":
+								console.log("Daire Nosu : "+ component["long_name"]);
+								break;
+							case "route":
+								console.log("Sokak : "+ component["long_name"]);
+								break;
+							case "administrative_area_level_4":
+								console.log("Semt : "+ component["long_name"]);
+								break;
+							case "administrative_area_level_2":
+								console.log("ilçe : "+ component["long_name"]);
+								break;
+							case "administrative_area_level_1":
+								console.log("Şehir : "+ component["long_name"]);
+								break;
+							case "country":
+								console.log("Ülke : "+ component["long_name"]);
+								break;
+							case "postal_code":
+								console.log("posta kodu : "+ component["long_name"]);
+								break;
+							default:
+								break;
+						}
+						// console.log(component["types"][0]);
+						// console.log(component[0]);
+						document.querySelector("#").value = ""
+				}
+				 }); 
+				} 
+				
+			  </script> 
+      </head>
+      <body onload="initialize()">
+        <div id="locationField">
+		  <input id="autocomplete" name="location" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+		  <input id="ship-address"/>
+		  <input id="address2"/>
+		  <input id="postcode"/>
+		</div>
+      </body>
+    </html>
+	
+	
+	
+	<!-- <script> 
+		 var autocomplete;
+			function initialize() { 
+			  autocomplete = new google.maps.places.Autocomplete( 
+				 /** @type {HTMLInputElement} */ 
+				 (document.getElementById("autocomplete")), 
+				{ types: ["geocode"] } 
+			   ); 
+			  google.maps.event.addListener(autocomplete, "place_changed", function(results,status) {
+				console.log(results);
+				console.log(status);
+
+			  }); 
+			 } 
+		   </script>  -->

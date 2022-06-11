@@ -1,0 +1,64 @@
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="mb-5">
+              <h3 class="footer-heading mb-4">Selami İnce Hakkında</h3>
+              <p>
+                Gayrimenkul sektörüne, bankacılık sektöründen birçok kişiye kride kullandırmış ve ev sahibi olmalarına aracı olmuş bir kişi olarak <b>emlak danışmanı</b> olarak bende varım.
+              </p>
+            </div>
+
+            
+            
+          </div>
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">İçerik</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#">Anasayfa</a></li>
+                  <li><a href="#">Satılık</a></li>
+                  <li><a href="#">Kiralık</a></li>
+                  <!-- <li><a href="#">Properties</a></li> -->
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#">Hakkımda</a></li>
+                  <!-- <li><a href="#">Privacy Policy</a></li> -->
+                  <li><a href="#">İletişim</a></li>
+                  <!-- <li><a href="#">Terms</a></li> -->
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h3 class="footer-heading mb-4">Takip Edin</h3>
+
+                <div>
+                  <a href="https://www.facebook.com/profile.php?id=100008467572683" target="_blank" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/SelamiInce6" target="_blank" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="https://www.instagram.com/selamiinceremax" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="https://www.linkedin.com/in/selami-ince-8605a4160/" target="_blank" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                </div>
+          </div>
+          
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website editing with by <a href="mailto:serifcicek92@gmail.com" target="_blank" >Şerif ÇİÇEK</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
